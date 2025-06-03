@@ -10,7 +10,7 @@ exports.idValidator = (req) => {
     if(Types.ObjectId.isValid(params[key])){
       validIds[key] = params[key];
     }else{
-      throw new Error(`${key}: ${params[key]} is an MongoDB ObjectID. on IDValidator`)
+      throw new Error(`${key}: ${params[key]} is not an MongoDB ObjectID. on IDValidator`)
     }
   })
   return validIds;
